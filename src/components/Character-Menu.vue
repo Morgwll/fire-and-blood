@@ -1,10 +1,15 @@
 <template>
     <div>
+        {{ characters }}
         <ul>
-            <router-link to="/" tag="li"><a>Home</a></router-link>
-            <router-link to="/character" tag="li"><a>Character</a></router-link>
-            <router-link to="/" tag="li"><a>Meh</a></router-link>
-            <router-link to="/" tag="li"><a>Meh</a></router-link>
+            <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a>{{ character.name }}</a></router-link>
         </ul>
     </div>
 </template>
+<script>
+    export default {
+        data:() => ({
+            characters: this.$store
+        })
+    }
+</script>

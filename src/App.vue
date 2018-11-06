@@ -10,9 +10,6 @@
   import appCharacterMenu from './components/Character-Menu.vue';
   import appNpcMenu from './components/NPC-Menu.vue';
   export default {
-    data: () => ({
-        msg: 'Welcome to Your Vue.js App'
-    }),
     components: {
       appCharacterMenu,
       appNpcMenu
