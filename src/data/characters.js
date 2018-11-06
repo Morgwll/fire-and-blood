@@ -1,618 +1,167 @@
 export const characters = [
-{
-    name: "Boligrafor",
-    portrait: '',
-    clan: "Raven Black",
-    stats: {
-        strength: {
-            text: "STR",
-            value: 16
+    {
+        name: "Boligrafor",
+        portrait: '',
+        clan: "Raven Black",
+        stats: {
+            strength: 16,
+            agility:  14,
+            constitution: 12,
+            wisdom:  11,
+            appearance: 10,
+            endurance: 9
         },
-        agility: {
-            text: "AGI",
-            value: 14
+        skills: {
+            acrobatics: 1,
+            athletics: 1,
+            craft: 2,
+            deceit: 2,
+            insight: 2,
+            intimidation: 2,
+            medicine: 2,
+            persuasion: 2,
+            religion: 2,
+            riding: 2,
+            science: 1,
+            stealth: 2,
+            supernatural: 2,
+            survival: 2,
         },
-        constitution: {
-            text: "CON",
-            value: 12
-        },
-        wisdom: {
-            text: "WIS",
-            value: 11
-        },
-        appearance: {
-            text: "APP",
-            value: 9
-        },
-        endurance: {
-            text: "END",
-            value: 8
+        madness: 0,
+        hitpoints: null,
+        sanity: null,
+        experience: 0,
+        level: 1,
+        currency: {
+            jewels: 2000,
+            gold: 30,
+            jade: 2,
+            silver: 400,
+            copper: 120
         }
     },
-    skills: {
-        athletics: {
-            text: "Athletics",
-            value: 1
+    {
+        name: "Tazor",
+        portrait: '',
+        clan: "Raven Black",
+        stats: {
+            strength: 16,
+            agility:  14,
+            constitution: 12,
+            wisdom:  11,
+            appearance: 10,
+            endurance: 9
         },
-        acrobatics: {
-            text: "Acrobatics",
-            value: 1
+        skills: {
+            acrobatics: 1,
+            athletics: 1,
+            craft: 2,
+            deceit: 2,
+            insight: 2,
+            intimidation: 2,
+            medicine: 2,
+            persuasion: 2,
+            religion: 2,
+            riding: 2,
+            science: 1,
+            stealth: 2,
+            supernatural: 2,
+            survival: 2,
         },
-        science: {
-            text: "Science/Alchemy",
-            value: 1
-        },
-        riding: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        stealth: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        survival: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        insight: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        intimidation: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        persuasion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        deceipt: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        supernatural: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        religion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        medicine: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        craft: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-    },
-    madness: 0,
-    hitpoints: {
-        temp: null, 
-        max: null
-    },
-    sanity: {
-        temp: null,
-        max: null
-    },
-    experience: 0,
-    level: 1,
-    blessings: [
-        {
-            name: "Strong",
-            value: "Strength + 2",
-        },
-        {
-            name: "Linguist",
-            value: "Knows +8 languages"
-        },
-        {
-            name: "Wise",
-            value: "Wisdom + 2"
-        }
-    ],
-    currency: {
-        jewels: {
-            text: "Jewels",
-            amount: 2000
-        },
-        gold: {
-            text: "Gold",
-            amount: 30
-        },
-        jade: {
-            text: "Jade",
-            amount: 2
-        },
-        silver: {
-            text: "Silver",
-            amount: 400
-        },
-        copper: {
-            text: "Copper",
-            amount: 120
+        madness: 0,
+        hitpoints: null,
+        sanity: null,
+        experience: 0,
+        level: 1,
+        currency: {
+            jewels: 2000,
+            gold: 30,
+            jade: 2,
+            silver: 400,
+            copper: 120
         }
     },
-    weapons: [
-        {
-            name: "Axe",
-            damage: 3,
-            reach: "5",
-            bonus: 0
+    {
+        name: "Mobilor",
+        portrait: '',
+        clan: "Raven Black",
+        stats: {
+            strength: 11,
+            agility:  14,
+            constitution: 12,
+            wisdom:  16,
+            appearance: 10,
+            endurance: 9
         },
-        {
-            name: "Sling",
-            damage: 1,
-            reach: "60/120",
-            bonus: 0
+        skills: {
+            acrobatics: 1,
+            athletics: 1,
+            craft: 2,
+            deceit: 2,
+            insight: 2,
+            intimidation: 2,
+            medicine: 2,
+            persuasion: 2,
+            religion: 2,
+            riding: 2,
+            science: 1,
+            stealth: 2,
+            supernatural: 2,
+            survival: 2,
+        },
+        madness: 0,
+        hitpoints: null,
+        sanity: null,
+        experience: 0,
+        level: 1,
+        currency: {
+            jewels: 2000,
+            gold: 30,
+            jade: 2,
+            silver: 400,
+            copper: 120
         }
-    ],
-    armor: {
-        name: "pelts",
-        bonus: 1
+    },
+    {
+        name: "Manzanor",
+        portrait: '',
+        clan: "Raven Black",
+        stats: {
+            strength: 14,
+            agility:  18,
+            constitution: 12,
+            wisdom:  9,
+            appearance: 10,
+            endurance: 11
+        },
+        skills: {
+            acrobatics: 1,
+            athletics: 1,
+            craft: 2,
+            deceit: 2,
+            insight: 2,
+            intimidation: 2,
+            medicine: 2,
+            persuasion: 2,
+            religion: 2,
+            riding: 2,
+            science: 1,
+            stealth: 2,
+            supernatural: 2,
+            survival: 2,
+        },
+        madness: 0,
+        hitpoints: null,
+        sanity: null,
+        experience: 0,
+        level: 1,
+        currency: {
+            jewels: 2000,
+            gold: 30,
+            jade: 2,
+            silver: 400,
+            copper: 120
+        }
     }
-  },
-  {
-    name: "Tazor",
-    portrait: '',
-    clan: "Raven Black",
-    stats: {
-        strength: {
-            text: "STR",
-            value: 16
-        },
-        agility: {
-            text: "AGI",
-            value: 14
-        },
-        constitution: {
-            text: "CON",
-            value: 12
-        },
-        wisdom: {
-            text: "WIS",
-            value: 11
-        },
-        appearance: {
-            text: "APP",
-            value: 9
-        },
-        endurance: {
-            text: "END",
-            value: 8
-        }
-    },
-    skills: {
-        athletics: {
-            text: "Athletics",
-            value: 1
-        },
-        acrobatics: {
-            text: "Acrobatics",
-            value: 1
-        },
-        science: {
-            text: "Science/Alchemy",
-            value: 1
-        },
-        riding: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        stealth: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        survival: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        insight: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        intimidation: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        persuasion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        deceipt: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        supernatural: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        religion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        medicine: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        craft: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-    },
-    madness: 0,
-    hitpoints: {
-        temp: null, 
-        max: null
-    },
-    sanity: {
-        temp: null,
-        max: null
-    },
-    experience: 0,
-    level: 1,
-    blessings: [
-        {
-            name: "Strong",
-            value: "Strength + 2",
-        },
-        {
-            name: "Linguist",
-            value: "Knows +8 languages"
-        },
-        {
-            name: "Wise",
-            value: "Wisdom + 2"
-        }
-    ],
-    currency: {
-        jewels: {
-            text: "Jewels",
-            amount: 2000
-        },
-        gold: {
-            text: "Gold",
-            amount: 30
-        },
-        jade: {
-            text: "Jade",
-            amount: 2
-        },
-        silver: {
-            text: "Silver",
-            amount: 400
-        },
-        copper: {
-            text: "Copper",
-            amount: 120
-        }
-    },
-    weapons: [
-        {
-            name: "Axe",
-            damage: 3,
-            reach: "5",
-            bonus: 0
-        },
-        {
-            name: "Sling",
-            damage: 1,
-            reach: "60/120",
-            bonus: 0
-        }
-    ],
-    armor: {
-        name: "pelts",
-        bonus: 1
-    }
-  },
-  {
-    name: "Mobilor",
-    portrait: '',
-    clan: "Raven Black",
-    stats: {
-        strength: {
-            text: "STR",
-            value: 16
-        },
-        agility: {
-            text: "AGI",
-            value: 14
-        },
-        constitution: {
-            text: "CON",
-            value: 12
-        },
-        wisdom: {
-            text: "WIS",
-            value: 11
-        },
-        appearance: {
-            text: "APP",
-            value: 9
-        },
-        endurance: {
-            text: "END",
-            value: 8
-        }
-    },
-    skills: {
-        athletics: {
-            text: "Athletics",
-            value: 1
-        },
-        acrobatics: {
-            text: "Acrobatics",
-            value: 1
-        },
-        science: {
-            text: "Science/Alchemy",
-            value: 1
-        },
-        riding: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        stealth: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        survival: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        insight: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        intimidation: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        persuasion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        deceipt: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        supernatural: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        religion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        medicine: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        craft: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-    },
-    madness: 0,
-    hitpoints: {
-        temp: null, 
-        max: null
-    },
-    sanity: {
-        temp: null,
-        max: null
-    },
-    experience: 0,
-    level: 1,
-    blessings: [
-        {
-            name: "Strong",
-            value: "Strength + 2",
-        },
-        {
-            name: "Linguist",
-            value: "Knows +8 languages"
-        },
-        {
-            name: "Wise",
-            value: "Wisdom + 2"
-        }
-    ],
-    currency: {
-        jewels: {
-            text: "Jewels",
-            amount: 2000
-        },
-        gold: {
-            text: "Gold",
-            amount: 30
-        },
-        jade: {
-            text: "Jade",
-            amount: 2
-        },
-        silver: {
-            text: "Silver",
-            amount: 400
-        },
-        copper: {
-            text: "Copper",
-            amount: 120
-        }
-    },
-    weapons: [
-        {
-            name: "Axe",
-            damage: 3,
-            reach: "5",
-            bonus: 0
-        },
-        {
-            name: "Sling",
-            damage: 1,
-            reach: "60/120",
-            bonus: 0
-        }
-    ],
-    armor: {
-        name: "pelts",
-        bonus: 1
-    }
-  },
-  {
-    name: "Applor",
-    portrait: '',
-    clan: "Raven Black",
-    stats: {
-        strength: {
-            text: "STR",
-            value: 16
-        },
-        agility: {
-            text: "AGI",
-            value: 14
-        },
-        constitution: {
-            text: "CON",
-            value: 12
-        },
-        wisdom: {
-            text: "WIS",
-            value: 11
-        },
-        appearance: {
-            text: "APP",
-            value: 9
-        },
-        endurance: {
-            text: "END",
-            value: 8
-        }
-    },
-    skills: {
-        athletics: {
-            text: "Athletics",
-            value: 1
-        },
-        acrobatics: {
-            text: "Acrobatics",
-            value: 1
-        },
-        science: {
-            text: "Science/Alchemy",
-            value: 1
-        },
-        riding: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        stealth: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        survival: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        insight: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        intimidation: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        persuasion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        deceipt: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        supernatural: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        religion: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        medicine: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-        craft: {
-            text: "Riding/Piloting",
-            value: 2
-        },
-    },
-    madness: 0,
-    hitpoints: {
-        temp: null, 
-        max: null
-    },
-    sanity: {
-        temp: null,
-        max: null
-    },
-    experience: 0,
-    level: 1,
-    blessings: [
-        {
-            name: "Strong",
-            value: "Strength + 2",
-        },
-        {
-            name: "Linguist",
-            value: "Knows +8 languages"
-        },
-        {
-            name: "Wise",
-            value: "Wisdom + 2"
-        }
-    ],
-    currency: {
-        jewels: {
-            text: "Jewels",
-            amount: 2000
-        },
-        gold: {
-            text: "Gold",
-            amount: 30
-        },
-        jade: {
-            text: "Jade",
-            amount: 2
-        },
-        silver: {
-            text: "Silver",
-            amount: 400
-        },
-        copper: {
-            text: "Copper",
-            amount: 120
-        }
-    },
-    weapons: [
-        {
-            name: "Axe",
-            damage: 3,
-            reach: "5",
-            bonus: 0
-        },
-        {
-            name: "Sling",
-            damage: 1,
-            reach: "60/120",
-            bonus: 0
-        }
-    ],
-    armor: {
-        name: "pelts",
-        bonus: 1
-    }
-  },
+  
 ]

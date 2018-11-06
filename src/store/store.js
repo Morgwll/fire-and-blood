@@ -10,9 +10,10 @@ import { incantations } from '../data/incantations.js';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+export const store = new Vuex.Store({
   state: {
     characters,
+    characterName: "Mobilor",
     monsters,
     weapons,
     incantations,
@@ -21,10 +22,17 @@ const store = new Vuex.Store({
     pantheon
   },
   getters: {
-
+    getCharacter: state => {
+      for(let index = 0; index < state.characters.length; index++) {
+        if(state.characters[index].name == state.characterName) {
+          return state.characters[index];
+        }
+      }
+    }
   },
   mutations: {
     'ADD_HITPOINTS' (state) {
+      state.character.hitpoints++;
     },
     'REMOVE_HITPOINTS' (state) {
     },
@@ -50,6 +58,8 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-
+    chooseCharacter: state => {
+      state.characterName
+    }
   }
 })

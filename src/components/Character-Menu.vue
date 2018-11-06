@@ -1,6 +1,5 @@
 <template>
     <div>
-        {{ characters }}
         <ul>
             <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a>{{ character.name }}</a></router-link>
         </ul>
@@ -8,8 +7,13 @@
 </template>
 <script>
     export default {
-        data:() => ({
-            characters: this.$store
-        })
+        data() {
+            return {
+                characters: this.$store.state.characters
+            }
+        },
+        created() {
+            console.log(this);
+        }
     }
 </script>
