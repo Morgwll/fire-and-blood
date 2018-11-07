@@ -8,11 +8,10 @@
                 <li v-for="(stat, index) in npcs.stats" :key="index"><span>{{ translations[0].stats[index] }}</span>: {{ stat }} Bonus: {{ calcBonus(stat) }} <button @click="diceRoller(20)">Roll</button></li>
             </ul>
         </div>
-            <h4>Skills</h4>
-            <ul>
-                <li v-for="(challenge, i) in npcs.challenges" :key="i">{{ translations[0].challenges[i] }}: {{ challenge }} <button @click="diceRoller(20)">Roll</button></li>
-            </ul>   
-        </div>      
+        <h4>Skills</h4>
+        <ul>
+            <li v-for="(challenge, i) in npcs.challenges" :key="i">{{ translations[0].challenges[i] }}: {{ challenge }} <button @click="diceRoller(20)">Roll</button></li>
+        </ul>        
     </div>
 </template>
 <script>
@@ -23,8 +22,7 @@
         return {
           npcs: this.$store.getters.getNPC,
           name: this.$store.dispatch('chooseCharacter', this.$route.params.name),
-          translations: charactersTranslations,
-          madness: 10
+          translations: charactersTranslations
         }
       }
     }

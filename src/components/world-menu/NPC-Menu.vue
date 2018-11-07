@@ -11,7 +11,7 @@
         data() {
             return {
                 npcs: this.$store.state.npcs,
-                menuVisible: false
+                menuVisible: true
             }
         },
         methods: {

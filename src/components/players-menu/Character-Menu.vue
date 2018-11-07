@@ -1,22 +1,18 @@
 <template>
-    <div class="menu-element menu-element-left" :class="{'menu-hidden-left': menuVisible}">
-        <div class="menu-tab-left" @click="toggleMenu"><i class="fas fa-users"></i></div>
-        <ul class="menu">
-            <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
-        </ul>
-    </div>
+    <ul class="menu">
+        <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
+    </ul>
 </template>
 <script>
     export default {
         data() {
             return {
                 characters: this.$store.state.characters,
-                menuVisible: false
+                menuVisible: true
             }
         },
         methods: {
             toggleMenu() {
-                console.log('meh', this.menuVisible);
                 this.menuVisible = !this.menuVisible;
             }
         },

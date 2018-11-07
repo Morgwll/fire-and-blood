@@ -1,6 +1,7 @@
 <template>
     <div class="character">
         <div>
+            <img class="character-portrait" :src="character.portrait">
             <h3>{{ translations[0].name }}: {{ $store.state.characterName }}</h3>
             <h4>{{ translations[0].clan }}: {{ character.clan }}</h4>
         </div>
@@ -85,5 +86,9 @@
         width: 100%;
         max-width: 922px;
         margin: 0 auto;
+        &-portrait {
+            height: 100px;
+            width: 100px;
+        }
     }
 </style>

@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <app-character-menu></app-character-menu>
-    <app-npc-menu></app-npc-menu>
+    <app-players-menu></app-players-menu>
+    <app-world-menu></app-world-menu>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import appCharacterMenu from './components/Character-Menu.vue';
-  import appNpcMenu from './components/NPC-Menu.vue';
+  import appPlayersMenu from './components/players-menu/Players-Menu.vue';
+  import appWorldMenu from './components/world-menu/World-Menu.vue';
   export default {
     components: {
-      appCharacterMenu,
-      appNpcMenu
+      appPlayersMenu,
+      appWorldMenu
     }
   }
 </script>
