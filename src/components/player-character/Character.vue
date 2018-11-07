@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="character">
         <div>
             <h3>{{ translations[0].name }}: {{ $store.state.characterName }}</h3>
             <h4>{{ translations[0].clan }}: {{ character.clan }}</h4>
@@ -33,7 +33,7 @@
 </template>
 <script>
     import mixins from '../../mixins/mixins';
-    import { charactersTranslations } from '../../data/en-tlts.js';
+    import { charactersTranslations } from '../../data/translations/en-tlts.js';
     export default {
         data() {
             return {
@@ -80,3 +80,10 @@
         }
     }
 </script>
+<style lang="scss">
+    .character {
+        width: 100%;
+        max-width: 922px;
+        margin: 0 auto;
+    }
+</style>

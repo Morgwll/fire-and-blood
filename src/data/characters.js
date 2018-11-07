@@ -1,7 +1,7 @@
 export const characters = [
     {
         name: "Boligrafor",
-        portrait: '',
+        portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
             strength: 16,
@@ -28,8 +28,8 @@ export const characters = [
             survival: 2,
         },
         madness: 0,
-        hitpoints: null,
-        sanity: null,
+        hitpoints: 90,
+        sanity: 60,
         experience: 0,
         level: 1,
         currency: {
@@ -42,7 +42,7 @@ export const characters = [
     },
     {
         name: "Tazor",
-        portrait: '',
+        portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
             strength: 16,
@@ -83,7 +83,7 @@ export const characters = [
     },
     {
         name: "Mobilor",
-        portrait: '',
+        portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
             strength: 11,
@@ -124,7 +124,7 @@ export const characters = [
     },
     {
         name: "Manzanor",
-        portrait: '',
+        portrait: 'https://ubistatic-a.akamaihd.net/0004/prod/images/151317_Heroes_Haven/Krysztof.jpg',
         clan: "Raven Black",
         stats: {
             strength: 14,
