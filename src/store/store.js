@@ -15,6 +15,7 @@ export const store = new Vuex.Store({
     characters,
     characterName: "Boligrafor",
     npcType: "Innkeeper",
+    monsterType: "Dek",
     monsters,
     weapons,
     incantations,
@@ -34,6 +35,13 @@ export const store = new Vuex.Store({
       for(let index = 0; index < state.npcs.length; index++) {
         if(state.npcs[index].type == state.npcType) {
           return state.npcs[index];
+        }
+      }
+    },
+    getMonster: state => {
+      for(let index = 0; index < state.monsters.length; index++) {
+        if(state.monsters[index].type == state.npcType) {
+          return state.monsters[index];
         }
       }
     }

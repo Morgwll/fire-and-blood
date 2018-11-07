@@ -1,11 +1,14 @@
 <template>
     <div class="character">
-        <div>
-            <h3>{{ translations[0].name }}: {{ $store.state.characterName }}</h3>
+        <div class="character-title">
+            <h3>{{ $store.state.characterName }}</h3>
             <h4>{{ translations[0].clan }}: {{ character.clan }}</h4>
         </div>
+        <div class="character-portrait">
+            <img :src="character.portrait">
+        </div>
         <div>
-            <ul>
+            <ul class="stat-list">
                 <li v-for="(stat, index) in character.stats" :key="index"><span>{{ translations[0].stats[index] }}</span>: {{ stat }} Bonus: {{ calcBonus(stat) }} <button @click="diceRoller(20)">Roll</button></li>
             </ul>
         </div>
@@ -83,7 +86,24 @@
 <style lang="scss">
     .character {
         width: 100%;
-        max-width: 922px;
+        max-width: 992px;
         margin: 0 auto;
+        &-title {
+            border: 2px solid #422f25;
+            background-color: #ddceaa;
+            h3, h4 {
+                margin: 2px;
+            }
+        }
+        &-portrait {
+            width: calc(100% - 40px);
+            margin: 10px auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .stat-list {
+        list-style-type: none;
     }
 </style>

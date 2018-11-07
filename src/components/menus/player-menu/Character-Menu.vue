@@ -35,6 +35,7 @@
         color: #fff;
         padding: 5px;
         line-height: 25px;
+        text-align: center; 
     }
     .menu-tab-left {
         left: 100px;
@@ -48,7 +49,7 @@
     }
     .menu-element {
         transition: .2s;
-        position: absolute;
+        position: fixed;
         top: 20px;
         background-color: rgba(0,0,0,.8);
         &-left {

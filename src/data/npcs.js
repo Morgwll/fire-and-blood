@@ -320,6 +320,38 @@ export const npcs = [
     }
   },
   {
+    type: "King/Queen",
+    portrait: 'https://i.pinimg.com/originals/47/e4/b1/47e4b16630a9c97946cbfdc8180dcc7c.jpg',
+    stats: {
+      strength: 10,
+      agility:  8,
+      constitution: 12,
+      wisdom:  15,
+      appearance: 8,
+      endurance: 7
+    },
+    challenges: {
+      deception: 15,
+      intimidation: 12,
+      persuasion: 14,
+      seduction: 18,
+      sleight: 10,
+      stealth: 10,
+    },
+    hitpoints: 90,
+    armor: 0,
+    attack: 2,
+    damage: 2,
+    sanity: 60,
+    currency: {
+      jewels: 1,
+      gold: 30,
+      jade: 0,
+      silver: 40,
+      copper: 120
+    }
+  },
+  {
     type: "Priest",
     portrait: 'https://vignette.wikia.nocookie.net/damo/images/a/a6/F46368bbf952cf70a28ed091161f4f6f--fantasy-rpg-fantasy-priest.jpg/revision/latest?cb=20170921195417',
     stats: {
@@ -384,7 +416,7 @@ export const npcs = [
     }
   },
   {
-    type: "Old Person",
+    type: "Beggar",
     portrait: 'http://3.bp.blogspot.com/-wTnXKzaaCjA/Ta5K_JJinCI/AAAAAAAAAME/IWoh_zDSLv0/s1600/oldman.jpg',
     stats: {
       strength: 10,
