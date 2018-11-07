@@ -10,7 +10,7 @@ export const npcs = [
         appearance: 8,
         endurance: 7
       },
-      difficulties: {
+      challenges: {
         deception: 15,
         intimidation: 12,
         persuasion: 14,
@@ -42,7 +42,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -74,7 +74,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -106,7 +106,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -138,7 +138,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -170,7 +170,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -202,7 +202,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -234,7 +234,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -266,7 +266,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -298,7 +298,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -330,7 +330,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -362,7 +362,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -394,7 +394,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -426,7 +426,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,
@@ -458,7 +458,7 @@ export const npcs = [
       appearance: 8,
       endurance: 7
     },
-    difficulties: {
+    challenges: {
       deception: 15,
       intimidation: 12,
       persuasion: 14,

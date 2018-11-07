@@ -18,4 +18,9 @@
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+  padding: 20px 40px;
+  background-image: url('https://5.imimg.com/data5/JB/EM/MY-11791301/parchment-paper-500x500.jpg');
+}
 </style>

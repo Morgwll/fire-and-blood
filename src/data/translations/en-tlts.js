@@ -26,6 +26,14 @@ export const charactersTranslations = [
             supernatural: "Supernatural",
             survival: "Survival"
         },
+        challenges: {
+            deception: "Deception",
+            intimidation: "Intimidation",
+            persuasion: "Persuasion",
+            seduction: "Seduction",
+            sleight: "Sleight of Hand",
+            stealth: "Stealth",
+        },
         madness: 0,
         hitpoints: null,
         sanity: null,

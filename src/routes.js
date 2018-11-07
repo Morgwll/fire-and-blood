@@ -6,5 +6,5 @@ import Story from './components/story/story.vue';
 export const routes = [
     { path: '', component: Story },
     { path: '/character/:name', component: Character },
-    { path: '/npc', component: NPC },
+    { path: '/npc/:type', component: NPC },
 ];
