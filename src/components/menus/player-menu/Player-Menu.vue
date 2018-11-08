@@ -10,6 +10,7 @@
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-book-open"></i></li>
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-ankh"></i></li>
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-feather"></i></li>
+            <router-link  class="menu-tab-left" tag="li" to="/combat"><a>Combat</a></router-link>
         </ul>
     </div>
 </template>

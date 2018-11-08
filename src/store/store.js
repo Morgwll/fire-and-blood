@@ -21,7 +21,15 @@ export const store = new Vuex.Store({
     incantations,
     npcs,
     locations,
-    pantheon
+    pantheon,
+    combatants: [
+      { name: "Manzanor", armor: 2, wisdom: 3, hitpoints: 30, sanity: 50, isSorcerer: false },
+      { name: "Tazor", armor: 2, wisdom: 3, hitpoints: 30, sanity: 50, isSorcerer: false },
+      { name: "Mobilor", armor: 2, wisdom: 3, hitpoints: 30, sanity: 50, isSorcerer: false },
+      { name: "Thief", armor: 2, wisdom: 3, hitpoints: 30, sanity: 50, isSorcerer: false },
+      { name: "Sorcerer", armor: 2, wisdom: 3, hitpoints: 30, sanity: 50, isSorcerer: true },
+      { name: "Thief", armor: 2, wisdom: 3, hitpoints: 30, sanity: 50, isSorcerer: false },
+    ]
   },
   getters: {
     getCharacter: state => {
@@ -44,6 +52,9 @@ export const store = new Vuex.Store({
           return state.monsters[index];
         }
       }
+    },
+    getCombatants: state => {
+      return state.combatants;
     }
   },
   mutations: {

@@ -13,17 +13,17 @@
             </ul>
         </div>
         <div>
-            Charisma: {{ calcCharisma }} <button @click="diceRoller(20)">Roll</button>
+            {{ translations[0].substats.charisma }}: {{ calcCharisma }} <button @click="diceRoller(20)">Roll</button>
             <br>
-            Sorcery: {{ calcSorcery }}
+            {{ translations[0].substats.sorcery }}: {{ calcSorcery }}
             <br>
-            Initiative: {{ calcInitiative }} <button @click="diceRoller(20)">Roll</button>
+            {{ translations[0].substats.initiative }}: {{ calcInitiative }} <button @click="diceRoller(20)">Roll</button>
             <br>
-            Hit Points: {{ hitpoints }} <button @click="hitpoints++">+</button><button @click="hitpoints--">-</button>
+            {{ translations[0].substats.hitpoints }}: {{ hitpoints }} <button @click="hitpoints++">+</button><button @click="hitpoints--">-</button>
             <br>
-            Investigation: {{ calcInvestigation }} <button @click="diceRoller(20)">Roll</button>
+            {{ translations[0].substats.investigation }}: {{ calcInvestigation }} <button @click="diceRoller(20)">Roll</button>
             <br>
-            Sanity: {{ character.stats.wisdom * 5 }} <button @click="character.sanity++">+</button><button @click="character.sanity--">-</button>
+            {{ translations[0].substats.sanity }}: {{ character.stats.wisdom * 5 }} <button @click="character.sanity++">+</button><button @click="character.sanity--">-</button>
             <br>
         </div>
         <div>
@@ -85,9 +85,6 @@
 </script>
 <style lang="scss">
     .character {
-        width: 100%;
-        max-width: 992px;
-        margin: 0 auto;
         &-title {
             border: 2px solid #422f25;
             background-color: #ddceaa;

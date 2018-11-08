@@ -10,6 +10,14 @@ export const charactersTranslations = [
             appearance: "APP",
             endurance: "END"
         },
+        substats: {
+            charisma: "Charisma",
+            sorcery: "Sorcery",
+            initiative: "Initiative",
+            hitpoints: "Hit Points",
+            investigation: "Investigation",
+            sanity: "Sanity"
+        },
         skills: {
             acrobatics: "Acrobatics",
             athletics: "Athletics",
