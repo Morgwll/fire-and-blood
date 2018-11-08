@@ -2,6 +2,7 @@
   <div id="app" class="app-styling">
     <app-player-menu></app-player-menu>
     <app-world-menu></app-world-menu>
+    <app-roll-result></app-roll-result>
     <router-view></router-view>
   </div>
 </template>
@@ -9,10 +10,12 @@
 <script>
   import appPlayerMenu from './components/menus/player-menu/Player-Menu.vue';
   import appWorldMenu from './components/menus/world-menu/World-Menu.vue';
+  import appRollResult from './components/rollResult.vue';
   export default {
     components: {
       appPlayerMenu,
-      appWorldMenu
+      appWorldMenu,
+      appRollResult
     }
   }
 </script>
@@ -25,7 +28,7 @@ body {
   font-family: 'Roboto';
 }
 .app-styling {
-  max-width: 850px;
+  //max-width: 850px;
   width: 100%;
   margin: 0 auto;
 }
