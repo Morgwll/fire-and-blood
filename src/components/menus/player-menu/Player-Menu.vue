@@ -6,11 +6,10 @@
         <ul class="tab-menu-left">
             <li class="menu-tab-left" @click="toggleMenu"><i class="fas fa-arrow-left"></i></li>
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-users"></i></li>
-            <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-shield-alt"></i></li>
+            <router-link  class="menu-tab-left" tag="li" to="/combat"><i class="fas fa-shield-alt"></i></router-link>
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-book-open"></i></li>
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-ankh"></i></li>
             <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-feather"></i></li>
-            <router-link  class="menu-tab-left" tag="li" to="/combat"><a>Combat</a></router-link>
         </ul>
     </div>
 </template>
@@ -58,6 +57,7 @@
         transition: .2s;
         position: absolute;
         top: 20px;
+        z-index: 6;
         background-color: rgba(0,0,0,.8);
         &-left {
             left: 0;
