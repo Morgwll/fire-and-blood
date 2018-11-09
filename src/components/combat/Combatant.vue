@@ -1,7 +1,7 @@
 <template>
   <div class="combatant">
     <div class="combatant-header" @click="toggle">
-      Name: {{ combatSpec.name }}
+      {{ combatSpec.name }}
       <span>Init: 16 <i class="fas fa-chevron-down"></i></span>
     </div>
     <div class="combatant-body" :class="{show: isShowing}">
@@ -10,7 +10,7 @@
       Sorcery: {{ combatSpec.sorcery }}
       <hr>
       <div class="combatant-body-melee">
-        Attack:
+        Weapon:
         <select>
           <option v-for="(weapon, index) in combatSpec.weapons" :key="index">{{ weapon.name }}</option>
         </select>
@@ -18,7 +18,7 @@
         <select>
           <option v-for="(foe, i) in combatants" :key="i">{{ foe.name }}</option>
         </select>
-        <button @click="attack(combatSpec.baseAttack, opponent.defr, 2, 2)">Attack!</button>
+        <button @click="attack(combatSpec.baseAttack, $store.state.defense, 2)">Attack!</button>
       </div>
       <div v-if="combatSpec.isSorcerer" class="combatant-body-sorcery">
         Incantation:
@@ -71,23 +71,6 @@
     methods: {
       toggle() {
         this.isShowing = !this.isShowing;
-      },
-      attack(atkr, defr, cost, dmg) {
-        const roll = this.diceRoller(20);
-        console.log(roll);
-        const hit = roll + atkr;
-        this.endurance = this.endurance - cost;
-        if(roll === 20) {
-          console.log("Natural 20!!");
-        }
-        if (hit > defr) {
-          console.log("Hit");
-        } else {
-          console.log("miss")
-        }
-      },
-      cast(dmg, defr, cost) {
-        this.sorcery = this.sorcery - cost;
       }
     }
   }

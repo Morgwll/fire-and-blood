@@ -33,8 +33,19 @@
 </script>
 <style lang="scss">
     .character {
-        width: 100%;
-        max-width: 922px;
-        margin: 0 auto;
+        &-title {
+            border: 2px solid #422f25;
+            background-color: #ddceaa;
+            h3, h4 {
+                margin: 2px;
+            }
+        }
+        &-portrait {
+            width: calc(100% - 40px);
+            margin: 10px auto;
+            img {
+                width: 100%;
+            }
+        }
     }
 </style>

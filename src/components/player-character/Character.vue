@@ -9,15 +9,13 @@
         </div>
         <div>
             <ul class="stat-list">
-                <li v-for="(stat, index) in character.stats" :key="index"><span>{{ translations[0].stats[index] }}</span>: {{ stat }} Bonus: {{ calcBonus(stat) }} <button @click="diceRoller(20)">Roll</button></li>
+                <li v-for="(stat, index) in character.stats" :key="index"><span>{{ translations[0].stats[index] }}</span>: {{ stat }} Bonus: {{ calcBonus(stat) }} <button @click="regRoll(calcBonus(stat), 12)">Roll</button></li>
             </ul>
         </div>
         <div>
             {{ translations[0].substats.charisma }}: {{ calcCharisma }} <button @click="diceRoller(20)">Roll</button>
             <br>
             {{ translations[0].substats.sorcery }}: {{ calcSorcery }}
-            <br>
-            {{ translations[0].substats.initiative }}: {{ calcInitiative }} <button @click="diceRoller(20)">Roll</button>
             <br>
             {{ translations[0].substats.hitpoints }}: {{ hitpoints }} <button @click="hitpoints++">+</button><button @click="hitpoints--">-</button>
             <br>
@@ -29,7 +27,7 @@
         <div>
             <h4>Skills</h4>
             <ul>
-                <li v-for="(skill, i) in character.skills" :key="i">{{ translations[0].skills[i] }}: {{ skill }} <button @click="diceRoller(20)">Roll</button></li>
+                <li v-for="(skill, i) in character.skills" :key="i">{{ translations[0].skills[i] }}: {{ skill }} <button @click="regRoll(2, 12)">Roll</button></li>
             </ul>   
         </div>      
     </div>
@@ -41,7 +39,6 @@
         data() {
             return {
                 character: this.$store.getters.getCharacter,
-                name: this.$store.dispatch('chooseCharacter', this.$route.params.name),
                 translations: charactersTranslations,
                 madness: 10
             }
