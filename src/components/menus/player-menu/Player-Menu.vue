@@ -4,11 +4,11 @@
             <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
         </ul>
         <ul class="tab-menu-left">
-            <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-users"></i></li>
-            <router-link  class="menu-tab-left" tag="li" to="/combat"><i class="fas fa-shield-alt"></i></router-link>
-            <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-book-open"></i></li>
-            <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-ankh"></i></li>
-            <li class="menu-tab-left" @click="switchContent(characters)"><i class="fas fa-feather"></i></li>
+            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-users"></i></li>
+            <router-link  class="menu-tab-left" tag="li" to="/combat" active-class="active-tab"><i class="fas fa-shield-alt"></i></router-link>
+            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-book-open"></i></li>
+            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-ankh"></i></li>
+            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-feather"></i></li>
         </ul>
     </div>
 </template>

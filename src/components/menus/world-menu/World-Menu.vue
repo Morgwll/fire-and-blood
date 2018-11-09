@@ -4,11 +4,11 @@
             <router-link :to="'/npc/' + npcs.name" tag="li" v-for="(npc, index) in menuContent" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="npc.portrait"><p>{{ npc.type }}</p></a></router-link>
         </ul>
         <ul class="tab-menu-right">
-            <li class="menu-tab-right" @click="switchContent(npcs)"><i class="fas fa-users"></i></li>
-            <li class="menu-tab-right" @click="switchContent(monsters)"><i class="fa fa-crow"></i></li>
-            <li class="menu-tab-right" @click="switchContent(npcs)"><i class="fas fa-compass"></i></li>
-            <li class="menu-tab-right" @click="switchContent(npcs)"><i class="fas fa-dungeon"></i></li>
-            <li class="menu-tab-right" @click="switchContent(npcs)"><i class="fab fa-critical-role"></i></li>
+            <li class="menu-tab-right" @click="switchContent(npcs)" active-class="active-tab"><i class="fas fa-users"></i></li>
+            <li class="menu-tab-right" @click="switchContent(monsters)" active-class="active-tab"><i class="fa fa-crow"></i></li>
+            <li class="menu-tab-right" @click="switchContent(npcs)" active-class="active-tab"><i class="fas fa-compass"></i></li>
+            <li class="menu-tab-right" @click="switchContent(npcs)" active-class="active-tab"><i class="fas fa-dungeon"></i></li>
+            <li class="menu-tab-right" @click="switchContent(npcs)" active-class="active-tab"><i class="fab fa-critical-role"></i></li>
         </ul>
     </div>
 </template>
