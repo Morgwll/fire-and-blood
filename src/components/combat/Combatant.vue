@@ -1,37 +1,40 @@
 <template>
-  <div class="combatant">
-    <div class="combatant-header" @click="toggle">
-      {{ combatSpec.name }}
-      <span>Init: 16 <i class="fas fa-chevron-down"></i></span>
-    </div>
-    <div class="combatant-body" :class="{show: isShowing}">
-      Hitpoints: {{ combatSpec.hitpoints }} + -
-      <br>
-      Sorcery: {{ combatSpec.sorcery }}
-      <hr>
-      <div class="combatant-body-melee">
-        Weapon:
-        <select>
-          <option v-for="(weapon, index) in combatSpec.weapons" :key="index">{{ weapon.name }}</option>
-        </select>
-        Target:
-        <select>
-          <option v-for="(foe, i) in combatants" :key="i">{{ foe.name }}</option>
-        </select>
-        <button @click="attack(combatSpec.baseAttack, $store.state.defense, 2)">Attack!</button>
+  <div class="combatant-container">
+    <div class="combatant">
+      <div class="combatant-header" @click="toggle">
+        {{ combatSpec.name }}
+        <span>Init: 16 <i class="fas fa-chevron-down"></i></span>
       </div>
-      <div v-if="combatSpec.isSorcerer" class="combatant-body-sorcery">
-        Incantation:
-        <select>
-          <option v-for="(incantation, ind) in combatSpec.incantations" :key="ind">{{ incantation.name }}</option>
-        </select>
-        Towards:
-        <select>
-          <option v-for="(foe, i) in combatants" :key="i">{{ foe.name }}</option>
-        </select>
-        <button>Cast!</button>
+      <div class="combatant-body" :class="{show: isShowing}">
+        Hitpoints: {{ combatSpec.hitpoints }} + -
+        <br>
+        Sorcery: {{ combatSpec.sorcery }}
+        <hr>
+        <div class="combatant-body-melee">
+          Weapon:
+          <select>
+            <option v-for="(weapon, index) in combatSpec.weapons" :key="index">{{ weapon.name }}</option>
+          </select>
+          Target:
+          <select>
+            <option v-for="(foe, i) in combatants" :key="i">{{ foe.name }}</option>
+          </select>
+          <button @click="attack(combatSpec.baseAttack, $store.state.defense, 2)">Attack!</button>
+        </div>
+        <div v-if="combatSpec.isSorcerer" class="combatant-body-sorcery">
+          Incantation:
+          <select>
+            <option v-for="(incantation, ind) in combatSpec.incantations" :key="ind">{{ incantation.name }}</option>
+          </select>
+          Towards:
+          <select>
+            <option v-for="(foe, i) in combatants" :key="i">{{ foe.name }}</option>
+          </select>
+          <button>Cast!</button>
+        </div>
       </div>
     </div>
+    <div class="combatant-remove" @click="removeCombatant"><i class="far fa-minus-square"></i></div>
   </div>
 </template>
 <script>
@@ -71,13 +74,40 @@
     methods: {
       toggle() {
         this.isShowing = !this.isShowing;
+      },
+      removeCombatant() {
+        //console.log("this is the combatant's array", this.combatants);
+        //console.log("this is a single combatant", this.combatant);
+        for (let i in this.combatants) {
+          if (this.combatants[i].name == this.combatSpec.name) {
+            console.log("this is the chosen", this.combatants[i]);
+            this.combatants.splice(i, 1);
+          }
+        }
+        /*let combArray = this.combatants.filter(obj => {
+          console.log(this.combatSpec.name);
+          console.log(obj.field)
+          return obj.field !== this.combatSpec.name;
+        });
+        console.log(combArray)*/
+        //this.combatants.splice(this.combatants.findIndex(item => item.name = this.combatSpec.name), 1)
       }
     }
   }
 </script>
 <style lang="scss">
+  .combatant-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .combatant-remove {
+      width: 15px;
+    }
+  }
   .combatant {
     margin: 10px auto;
+    width: calc(100% - 15px);
+    margin-right: 20px;
     &-header {
       border: 2px solid #422f25;
       background-color: #6d4420;
