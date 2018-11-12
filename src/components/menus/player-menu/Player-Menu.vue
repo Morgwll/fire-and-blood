@@ -6,9 +6,9 @@
         <ul class="tab-menu-left">
             <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-users"></i></li>
             <router-link  class="menu-tab-left" tag="li" to="/combat" active-class="active-tab"><i class="fas fa-shield-alt"></i></router-link>
-            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-book-open"></i></li>
-            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-ankh"></i></li>
-            <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-feather"></i></li>
+            <li class="menu-tab-left" @click="switchContent(incantations)" active-class="active-tab"><i class="fas fa-book-open"></i></li>
+            <li class="menu-tab-left" @click="switchContent(pantheon)" active-class="active-tab"><i class="fas fa-ankh"></i></li>
+            <li class="menu-tab-left" @click="switchContent(lore)" active-class="active-tab"><i class="fas fa-feather"></i></li>
         </ul>
     </div>
 </template>
@@ -18,7 +18,10 @@
             return {
                 menuContent: null,
                 characters: this.$store.state.characters,
-                menuHidden: true
+                menuHidden: true,
+                incantations: this.$store.state.incantations,
+                pantheon: this.$store.state.pantheon,
+                lore: this.$store.state.lore
             }
         },
         methods: {

@@ -4,6 +4,7 @@ import { characters } from '../data/characters.js';
 import { monsters } from '../data/monsters.js';
 import { locations } from '../data/locations.js';
 import { weapons } from '../data/weapons.js';
+import { advice } from '../data/advice.js';
 import { npcs } from '../data/npcs.js';
 import { pantheon } from '../data/pantheon.js';
 import { incantations } from '../data/incantations.js';
@@ -13,13 +14,12 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     characters,
-    characterName: "Boligrafor",
-    npcType: "Innkeeper",
-    monsterType: "Dek",
+    choice: characters[0].name,
     monsters,
     weapons,
     incantations,
     npcs,
+    advice,
     locations,
     pantheon,
     showRollModal: false,
@@ -27,34 +27,26 @@ export const store = new Vuex.Store({
     rollMessage: '',
     bonus: null,
     defense: null,
-    combatants: [
-      { name: "Boligrafor", armor: 2, wisdom: 3, hitpoints: 30, initiative: 13, sanity: 50, isSorcerer: false },
-      { name: "Manzanor", armor: 2, wisdom: 3, hitpoints: 30, initiative: 13, sanity: 50, isSorcerer: false },
-      { name: "Tazor", armor: 2, wisdom: 3, hitpoints: 30, initiative: 12, sanity: 50, isSorcerer: false },
-      { name: "Mobilor", armor: 2, wisdom: 3, hitpoints: 30, initiative: 13, sanity: 50, isSorcerer: false },
-      { name: "Thief", armor: 2, wisdom: 3, hitpoints: 30, initiative: 13, sanity: 50, isSorcerer: false },
-      { name: "Sorcerer", armor: 2, wisdom: 3, hitpoints: 30, initiative: 13, sanity: 50, isSorcerer: true },
-      { name: "Thief", armor: 2, wisdom: 3, hitpoints: 30, initiative: 13, sanity: 50, isSorcerer: false },
-    ]
+    combatants: []
   },
   getters: {
     getCharacter: state => {
-      for(let index = 0; index < state.characters.length; index++) {
-        if(state.characters[index].name == state.characterName) {
+      for(let index in state.characters) {
+        if(state.characters[index].name == state.choice) {
           return state.characters[index];
         }
       }
     },
     getNPC: state => {
       for(let index = 0; index < state.npcs.length; index++) {
-        if(state.npcs[index].type == state.npcType) {
+        if(state.npcs[index].name == state.npcName) {
           return state.npcs[index];
         }
       }
     },
     getMonster: state => {
       for(let index = 0; index < state.monsters.length; index++) {
-        if(state.monsters[index].type == state.npcType) {
+        if(state.monsters[index].name == state.npcName) {
           return state.monsters[index];
         }
       }

@@ -1,7 +1,7 @@
 <template>
     <div class="character">
         <div class="character-title">
-            <h3>{{ $store.state.characterName }}</h3>
+            <h3>{{ $store.getters.getCharacter.name }}</h3>
             <h4>{{ translations[0].clan }}: {{ character.clan }}</h4>
         </div>
         <div class="character-portrait">
@@ -29,7 +29,8 @@
             <ul>
                 <li v-for="(skill, i) in character.skills" :key="i">{{ translations[0].skills[i] }}: {{ skill }} <button @click="regRoll(2, 12)">Roll</button></li>
             </ul>   
-        </div>      
+        </div>
+        <button @click="addToRoster(character)"><i class="fas fa-user-plus"></i></button>     
     </div>
 </template>
 <script>
@@ -39,8 +40,12 @@
         data() {
             return {
                 character: this.$store.getters.getCharacter,
+                characters: this.$store.state.characters,
                 translations: charactersTranslations,
-                madness: 10
+                madness: 10,
+                hitpoints: null,
+                sanity: null,
+                investigation: null
             }
         },
         computed: {
@@ -65,18 +70,18 @@
             },
             calcSorcery() {
                 return Math.floor((this.character.stats.wisdom * 3) + this.madness);
+            },
+            hpSanInv() {
+                const htp = {
+                    con: this.character.stats.constitution / 2,
+                    end: this.character.stats.endurance / 4,
+                    agi: this.character.stats.agility / 2,
+                    str: this.character.stats.strength / 3,
+                }
+                this.hitpoints = Math.floor(htp.con + htp.end + htp.str + htp.agi);
+                this.sanity = Math.floor((this.character.stats.wisdom * 5) - this.madness);
+                this.investigation = Math.floor(this.character.stats.wisdom + 2);
             }
-        },
-        created() {
-            const htp = {
-                con: this.character.stats.constitution / 2,
-                end: this.character.stats.endurance / 4,
-                agi: this.character.stats.agility / 2,
-                str: this.character.stats.strength / 3,
-            }
-            this.hitpoints = Math.floor(htp.con + htp.end + htp.str + htp.agi);
-            this.sanity = Math.floor((this.character.stats.wisdom * 5) - this.madness);
-            this.investigation = Math.floor(this.character.stats.wisdom + 2);
         }
     }
 </script>

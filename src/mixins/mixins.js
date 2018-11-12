@@ -21,6 +21,22 @@ Vue.mixin({
         score--;
       }
     },
+    addToRoster(info) {
+      const object = {
+        name: info.name,
+        portrait: info.portrait,
+        armor: info.armor,
+        wis: info.stats.wisdom,
+        initiative: info.initiative,
+        attacks: {
+          unarmed: info.attack,
+          weapon: info.attack + 2
+        },
+        sanity: info.sanity,
+        isSorcerer: info.isSorcerer
+      }
+      this.$store.state.combatants.push(object);
+    },
     regRoll(bonus, challenge) {
       this.$store.state.showRollModal = true;
       this.$store.state.roll = this.diceRoller(20);

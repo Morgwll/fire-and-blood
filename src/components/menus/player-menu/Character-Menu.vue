@@ -1,8 +1,7 @@
 <template>
     <div class="menu-element menu-element-left" :class="{'menu-hidden-left': menuVisible}">
-        <div class="menu-tab-left" @click="toggleMenu"><i class="fas fa-users"></i></div>
         <ul class="menu">
-            <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
+            <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" @click.native="changeCharacter(character.name)" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
         </ul>
     </div>
 </template>
@@ -16,8 +15,10 @@
         },
         methods: {
             toggleMenu() {
-                console.log('meh', this.menuVisible);
                 this.menuVisible = !this.menuVisible;
+            },
+            changeCharacter(chosen) {
+                this.$store.state.chosen = chosen;
             }
         },
         created() {

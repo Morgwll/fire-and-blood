@@ -1,7 +1,7 @@
 <template>
     <div class="character">
         <div class="character-title">
-            <h3>{{ $store.getters.getNPC.name }}</h3>
+            <h3>{{ $store.getters.getMonster.name }}</h3>
         </div>
         <div class="character-portrait">
             <img :src="npcs.portrait">
@@ -24,7 +24,7 @@
     export default {
       data() {
         return {
-          npcs: this.$store.getters.getNPC,
+          npcs: this.$store.getters.getMonster,
           translations: charactersTranslations,
           madness: 10
         }
