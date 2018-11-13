@@ -1,7 +1,7 @@
 <template>
     <div class="menu-element menu-element-right" :class="{'menu-hidden-right': menuHidden}">
         <ul class="menu">
-            <router-link :to="'/world/npcs/' + element.name" tag="li" v-for="(element, index) in menuContent" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="element.portrait"><p>{{ element.name }}</p></a></router-link>
+            <router-link :to="route + element.name" tag="li" v-for="(element, index) in menuContent" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="element.portrait"><p>{{ element.name }}</p></a></router-link>
         </ul>
         <ul class="tab-menu-right">
             <li class="menu-tab-right" @click="switchContent(npcs)" active-class="active-tab"><i class="fas fa-users"></i></li>
@@ -16,18 +16,38 @@
     export default {
         data() {
             return {
-                menuContent: this.$store.state.npcs,
-                npcs: this.$store.state.npcs,
-                monsters: this.$store.state.monsters,
-                locations: this.$store.state.locations,
-                dungeons: this.$store.state.dungeons,
-                advice: this.$store.state.advice,
+                menuContent: { 
+                    data: this.$store.state.npcs,
+                    route: '/world/npc/' 
+                },
+                npcs: { 
+                    data: this.$store.state.npcs,
+                    route: '/world/npc/' 
+                },
+                monsters: { 
+                    data: this.$store.state.monsters,
+                route: '/world/monsters/' 
+                },
+                locations: { 
+                    data: this.$store.state.locations,
+                    route: '/world/locations/' 
+                },
+                dungeons: { 
+                    data: this.$store.state.dungeons,
+                    route: '/world/dungeons/' 
+                },
+                advice: { 
+                    data: this.$store.state.advice,
+                    route: '/world/advice' 
+                },
+                route: '/world/npc/',
                 menuHidden: true
             }
         },
         methods: {
             switchContent(content) {
-                this.menuContent = content;
+                this.menuContent = content.data;
+                this.route = content.route;
                 this.menuHidden = !this.menuHidden;
             }
         },

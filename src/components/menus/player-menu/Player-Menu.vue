@@ -1,7 +1,7 @@
 <template>
     <div class="menu-element menu-element-left" :class="{'menu-hidden-left': menuHidden}">
         <ul class="menu">
-            <router-link :to="'/character/' + character.name" tag="li" v-for="(character, index) in characters" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
+            <router-link :to="route + character.name" tag="li" v-for="(character, index) in characters.data" :key="index"><a class="menu-hero"><img class="menu-hero-portrait" :src="character.portrait"><p>{{ character.name }}</p></a></router-link>
         </ul>
         <ul class="tab-menu-left">
             <li class="menu-tab-left" @click="switchContent(characters)" active-class="active-tab"><i class="fas fa-users"></i></li>
@@ -17,16 +17,30 @@
         data() {
             return {
                 menuContent: null,
-                characters: this.$store.state.characters,
-                menuHidden: true,
-                incantations: this.$store.state.incantations,
-                pantheon: this.$store.state.pantheon,
-                lore: this.$store.state.lore
+                characters: { 
+                    data: this.$store.state.characters,
+                    route: '/character/'
+                },
+                incantations: { 
+                    data: this.$store.state.incantations,
+                    route: '/story/incantations'
+                },
+                pantheon: { 
+                    data: this.$store.state.pantheon,
+                    route: '/story/pantheon'
+                },
+                lore: { 
+                    data: this.$store.state.lore,
+                    route: '/story/lore'
+                },
+                route: '/character',
+                menuHidden: true
             }
         },
         methods: {
             switchContent(content) {
-                this.menuContent = content;
+                this.menuContent = content.data;
+                this.route = content.route;
                 this.menuHidden = !this.menuHidden;
             }
         },
