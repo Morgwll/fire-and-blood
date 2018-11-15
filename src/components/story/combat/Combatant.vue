@@ -38,7 +38,7 @@
   </div>
 </template>
 <script>
-  import mixins from '../../mixins/mixins';
+  import mixins from '../../../mixins/mixins';
   export default {
     props: ['combatants', 'combatant'],
     data() {

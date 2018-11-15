@@ -1,16 +1,16 @@
 import Home from './components/Home.vue';
-import Character from './components/player-character/Character.vue';
-import Combat from './components/combat/Combat.vue';
-import NPC from './components/non-player-character/NPC.vue';
-import Monster from './components/non-player-character/Monster.vue';
-import Locations from './components/places/Locations.vue';
-import World from './components/places/World.vue';
-import Dungeon from './components/places/Dungeons.vue';
-import Advice from './components/story/Advice.vue';
+import Character from './components/story/Character.vue';
+import Combat from './components/story/combat/Combat.vue';
 import Incantations from './components/story/Incantations.vue';
 import Lore from './components/story/Lore.vue';
 import Pantheon from './components/story/Pantheon.vue';
 import Story from './components/story/Story.vue';
+import NPC from './components/world/NPC.vue';
+import Monster from './components/world/Monster.vue';
+import Locations from './components/world/Locations.vue';
+import World from './components/world/World.vue';
+import Dungeon from './components/world/Dungeons.vue';
+import Advice from './components/world/Advice.vue';
 
 export const routes = [
     { path: '', component: Story },
